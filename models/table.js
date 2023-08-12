@@ -14,7 +14,7 @@ const tableSchema=new mongoose.Schema({
         unique:true
     },
     Hobbies:{
-        type:[String],
+        type:String,
         require:true
     },
     createdAt:{
