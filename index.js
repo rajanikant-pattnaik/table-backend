@@ -3,7 +3,9 @@ import connectDb from "./dbConfig.js"
 import dotenv from "dotenv"
 import cors from 'cors'
 import router from "./router/table.js";
+
 dotenv.config();
+const PORT=process.env.PORT;
 connectDb();
 
 
@@ -13,6 +15,6 @@ app.use(cors());
 
 app.use('/api/v1',router)
 
-app.listen(4000,()=>{
-    console.log(`server running at port ${4000}`);
+app.listen(PORT,()=>{
+    console.log(`server running at port ${PORT}`);
 })
